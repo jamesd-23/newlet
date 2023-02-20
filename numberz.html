@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="text/javascript" src="numbers.js" defer></script>
+
+    <!--
+      This is the page head - it contains info the browser uses to display the page
+      You won't see what's in the head in the page
+      Scroll down to the body element for the page content
+    -->
+
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <!-- 
+      This is an HTML comment
+      You can write text in a comment and the content won't be visible in the page
+    -->
+
+    <title>NUMBERZ - The number game</title>
+
+    <!-- Meta tags for SEO and social sharing -->
+    <link rel="canonical" href="https://www.letrz.co.uk" />
+    <meta
+      name="description"
+      content="Guess the number. 5 digits, no repeated numbers, 5 guesses. Simple"
+    />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="Guess the number" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://www.letrz.co.uk/numberz.html" />
+    <meta
+      property="og:description"
+      content="One word, 5 letters, 5 guesses - simple but addictive!"
+    />
+
+    <meta name="twitter:card" content="summary" />
+
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Import the webpage's javascript file -->
+  </head>
+  <body onload="pickone()">
+    <center>
+      
+           <!-- Top Navigation Menu -->
+<div class="topnav">
+  <a href="#home" class="active">NUMBERZ</a>
+  <!-- Navigation links (hidden by default) -->
+  <div id="myLinks">
+    <a href="/index.html">Letterz Game</a>
+  </div>
+  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+      <p id="instructions">
+        5 digits, no repeated numbers, 5 guesses. Simple<br />
+        Press ✓ to submit your guess, &lt; is backspace and X is clear.
+      </p>
+    </center>
+
+    <center>
+      <div id="w2"></div>
+
+      <div id="answ"></div>
+      <table id="result">
+     
+      
+      </table>
+      <div id="error"></div>
+    </center>
+    <form>
+      <center>
+        <h3 id="word"></h3>
+   <table id="keybo">
+        </table>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <p id="gamesdone"></p>
+          </div>
+        </div>
+
+        <div id="keyz" style="position: fixed; bottom: 5px; margin-left: auto; margin-right: auto; width: 100%">
+          <input id="1" type="button" value="1" onclick="guess('1')" />
+          <input id="2" type="button" value="2" onclick="guess('2')" />
+          <input id="3" type="button" value="3" onclick="guess('3')" />
+          <input id="4" type="button" value="4" onclick="guess('4')" />
+          <input id="5" type="button" value="5" onclick="guess('5')" /><br>
+          <input id="6" type="button" value="6" onclick="guess('6')" />
+          <input id="7" type="button" value="7" onclick="guess('7')" />
+          <input id="8" type="button" value="8" onclick="guess('8')" />
+          <input id="9" type="button" value="9" onclick="guess('9')" />
+          <input id="0" type="button" value="0" onclick="guess('0')" /><br>
+          <input id="submit" type="button" value="✓" onclick="guessgo()" />
+          <input id="del" type="button" value="<" onclick="dels()" />
+          <input id="del2" type="button" value="X" onclick="clearz()" />
+        </div>
+      </center>
+    </form>
+  </body>
+</html>

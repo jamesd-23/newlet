@@ -1,0 +1,83 @@
+<html>
+  <head></head>
+  <body>
+    <p>Baby Sitter Calculator</p>
+ <label for="pri">Price:</label> 
+    <input type="number" id="pri" name="pri" value="12" ><br><br>
+    <label for="st">Start Time:</label>          <label for="eh">End Time:</label><br>
+
+    <input type="time" id="st" name="st">
+  <input type="time" id="et" name="et" onchange="time()" ><br>
+  
+   <!-- <input type="button" onclick="time()"> -->
+    <br>
+    <p id="output">
+      
+    </p>
+    
+    <script>
+      function time(){
+       var output;  
+      var startform;
+        var endform;
+        var end;
+      var starthour;
+      var startminut;
+      var endhour;
+      var endminute;
+      var pricehour = 12;
+      var priceminute = pricehour / 60;
+      var min = 0;
+      var endprice;
+ 
+      
+
+        startform = document.getElementById("st").value;
+        endform = document.getElementById("et").value;
+        var sf = startform[0]+startform[1];
+        var sm = startform[3]+startform[4];
+        starthour = parseInt(sf);
+        startminute = parseInt(sm);
+       
+         var ef = endform[0]+endform[1];
+        var em = endform[3]+endform[4];
+        endhour = parseInt(ef);
+        endminute = parseInt(em);
+        
+        if (endhour < 10){
+        if (endhour < starthour){
+          endhour = endhour + 24;
+        }
+      } else if (end < starthour) {
+        document.getElementById("output").innerHTML = "End Time Should be after star time";
+      }
+      min = (endhour - starthour) * 60;
+      output = "Start time: " + startform + "<br>";
+     output = output + "End time: " + endform + "<br>";
+    
+      if (endminute > startminute) {
+        min = min + (endminute - startminute);
+      }
+      if (startminute > endminute) {
+        min = min - (startminute - endminute);
+      }
+      endprice = min * priceminute;
+      
+      var roundmin =  Math.ceil(min / 15);
+  
+      var roundprice =  roundmin * (priceminute*15);
+      output = output +  "Time Elapsed: " + (min/60).toFixed(2) + " hours <br>";
+      output = output +"Total: " + (min) + " minutes <br>";
+      output = output +"Raw price: £" + (endprice).toFixed(2) + "<br>";
+      output = output +"Rounded up 15 mins: £" + (roundprice).toFixed(2) + "<br>";
+      
+      
+     
+      document.getElementById("output").innerHTML = output;
+     
+      // deal with after midnight
+     
+      }
+    </script>
+  </body>
+</html>
