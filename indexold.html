@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script type="text/javascript" src="5words.js" defer></script>
+    <!--
+      This is the page head - it contains info the browser uses to display the page
+      You won't see what's in the head in the page
+      Scroll down to the body element for the page content
+    -->
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- 
+      This is an HTML comment
+      You can write text in a comment and the content won't be visible in the page
+    -->
+
+    <title>LETTERZ - The word game</title>
+
+    <!-- Meta tags for SEO and social sharing -->
+   <link rel="canonical" href="https://www.letrz.co.uk" />
+    <meta
+      name="description"
+      content="One word, 5 letters, 5 guesses - simple but addictive!"
+    />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="Guess the word" />
+    <meta property="og:type" content="article" />
+   <meta property="og:url" content="https://www.letrz.co.uk" />
+    <meta
+      property="og:description"
+      content="One word, 5 letters, 5 guesses - simple but addictive!"
+    />
+    
+    <meta name="twitter:card" content="summary" />
+
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Import the webpage's javascript file -->
+ 
+  </head>
+  <body onload="pickone()">
+  <h1>
+    LETTERZ</h1>
+    <form>
+    <p>
+  Wrong Letters
+      </h3>
+  <div id="w2">
+  
+      </div>
+      <input type="text" id="guessword" name="guessword" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+      <script>
+    document.getElementById('guessword').addEventListener('keypress', function(event) {
+        if (event.keyCode == 13) {
+            event.preventDefault();
+        }
+    });
+</script>
+<input id="createbuttin" type="button" value="Guess" onclick="guess()">
+<div id="answ">
+      
+    </div>
+    <table id="result">
+      
+    </table>
+      <div id="error">
+  
+      </div>
+
+    </form>
+ 
+  </body>
+</html>
