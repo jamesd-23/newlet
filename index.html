@@ -1,125 +1,19 @@
-<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <script type="text/javascript" src="5wordsv2.js" defer></script>
-    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!--
-      This is the page head - it contains info the browser uses to display the page
-      You won't see what's in the head in the page
-      Scroll down to the body element for the page content
-    -->
-
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"
-    />
-
-    <!-- 
-      This is an HTML comment
-      You can write text in a comment and the content won't be visible in the page
-    -->
-
-    <title>LETTERZ - The word game</title>
-
-    <!-- Meta tags for SEO and social sharing -->
-    <link rel="canonical" href="https://www.letrz.co.uk" />
-    <meta
-      name="description"
-      content="One word, 5 letters, 5 guesses - simple but addictive!"
-    />
-    <meta name="robots" content="index,follow" />
-    <meta property="og:title" content="Guess the word" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://www.letrz.co.uk" />
-    <meta
-      property="og:description"
-      content="One word, 5 letters, 5 guesses - simple but addictive!"
-    />
-
-    <meta name="twitter:card" content="summary" />
-
-    <!-- Import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css" />
-
-    <!-- Import the webpage's javascript file -->
-  </head>
-  <body onload="pickone()">
-    <center>
-      
-      <!-- Top Navigation Menu -->
-<div class="topnav">
-  <a href="#home" class="active">LETTERZ</a>
-  <!-- Navigation links (hidden by default) -->
-  <div id="myLinks">
-    <a href="/numberz.html">Numberz Game</a>
-  </div>
-  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
-      <p id="instructions">
-        One word, 5 letters, 5 guesses - simple.<br />
-        Press ✓ to submit your guess, &lt; is backspace and X is clear.
-      </p>
-    </center>
-
-    <center>
-      <div id="w2"></div>
-
-      <div id="answ"></div>
-      <table id="result">
-     
-      
-      </table>
-      <div id="error"></div>
-    </center>
-    <form>
-      <center>
-        <h3 id="word"></h3>
-   <table id="keybo">
-        </table>
-        <div id="myModal" class="modal">
-          <div class="modal-content">
-            <p id="gamesdone"></p>
-          </div>
-        </div>
-
-                <div id="keyz" style="position: fixed; bottom: 5px; margin-left: -5px; margin-right: auto; width: 98%">
-          <input id="q" type="button" value="q" onclick="guess('q')" />
-          <input id="w" type="button" value="w" onclick="guess('w')" />
-          <input id="e" type="button" value="e" onclick="guess('e')" />
-          <input id="r" type="button" value="r" onclick="guess('r')" />
-          <input id="t" type="button" value="t" onclick="guess('t')" />
-          <input id="y" type="button" value="y" onclick="guess('y')" />
-          <input id="u" type="button" value="u" onclick="guess('u')" />
-          <input id="i" type="button" value="i" onclick="guess('i')" />
-          <input id="o" type="button" value="o" onclick="guess('o')" />
-          <input id="p" type="button" value="p" onclick="guess('p')" /><br />
-          <input id="a" type="button" value="a" onclick="guess('a')" />
-          <input id="s" type="button" value="s" onclick="guess('s')" />
-          <input id="d" type="button" value="d" onclick="guess('d')" />
-          <input id="f" type="button" value="f" onclick="guess('f')" />
-          <input id="g" type="button" value="g" onclick="guess('g')" />
-          <input id="h" type="button" value="h" onclick="guess('h')" />
-          <input id="j" type="button" value="j" onclick="guess('j')" />
-          <input id="k" type="button" value="k" onclick="guess('k')" />
-          <input id="l" type="button" value="l" onclick="guess('l')" /><br />
-          <input id="z" type="button" value="z" onclick="guess('z')" />
-          <input id="x" type="button" value="x" onclick="guess('x')" />
-          <input id="c" type="button" value="c" onclick="guess('c')" />
-          <input id="v" type="button" value="v" onclick="guess('v')" />
-          <input id="b" type="button" value="b" onclick="guess('b')" />
-          <input id="n" type="button" value="n" onclick="guess('n')" />
-          <input id="m" type="button" value="m" onclick="guess('m')" /><br />
-          <input id="submit" type="button" value="✓" onclick="guessgo()" />
-          <input id="del" type="button" value="<" onclick="dels()" />
-          <input id="del2" type="button" value="X" onclick="clearz()" />
-        </div>
-      </center>
-    </form>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>TrinkLee</title>
+</head>
+<body>
+<!-- Profile picture-->
+<img src="https://cdn.glitch.global/d39b64a8-f768-4e65-baa7-9dbd49fa1a2d/j1.png?v=1677271748798" alt="profile picture" class="profile-picture">
+<!-- Profile name-->
+<div class="profile-name">@jamesdare</div>
+<!-- Links-->
+<a href="https://uk.linkedin.com/in/jamesdare" class="links">LinkedIn Profile</a>
+<a href="https://www.revitive.com" class="links">Work: Revitive.com</a>
+<!-- Logo -->
+<div class="bottom-text"></div>
+</body>
 </html>
