@@ -551,7 +551,7 @@ function guessgo() {
           }
           win +=
             "%</td></tr><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></table>";
-          win += '<br><a href="https://letrz.co.uk/numberz.html">New Game</a>';
+          win += '<br><a href="/ltrz/numberz.html">New Game</a>';
           document.getElementById("gamesdone").innerHTML = win;
           document.getElementById("myModal").style.display = "block";
           var x = document.getElementById("guessword");

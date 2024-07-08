@@ -407,7 +407,7 @@ function guessgo() {
             win += cwin;
           } else {win += 0;}
           win += "%</td></tr><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th></table>";
-          win += '<br><a href="https://letrz.co.uk">New Game</a>';
+          win += '<br><a href="/ltrz">New Game</a>';
         
         document.getElementById("gamesdone").innerHTML = win;
         document.getElementById("myModal").style.display = "block";
